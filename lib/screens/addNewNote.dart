@@ -46,7 +46,7 @@ class _AddNewNoteState extends State<AddNewNote> {
                           note.header = _titleController.text;
                           note.details = _contentController.text;
                           note.created_at = DateTime.now();
-                          var result = await _noteService.saveNote(note);
+                          var result = await _noteService.createNote(note);
                           Navigator.pop(context, result);
                         }
                       },

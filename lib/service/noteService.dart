@@ -9,7 +9,7 @@ class NoteServices{
     _repository = Repository();
   }
 
-  saveNote(Note note) async{
+  createNote(Note note) async{
     return await _repository.insertData('notes', note.noteMap());
   }
 
